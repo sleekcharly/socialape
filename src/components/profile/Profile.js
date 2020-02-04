@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import EditDetails from './EditDetails';
-import MyButton from '../util/MyButton';
+import MyButton from '../../util/MyButton';
 
 
 // MUI stuff
@@ -23,7 +23,7 @@ import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 
 // Redux stuff
 import { connect } from 'react-redux';
-import { logoutUser, uploadImage } from '../redux/actions/userActions';
+import { logoutUser, uploadImage } from '../../redux/actions/userActions';
 
 const styles = (theme) => ({
     paper: {
@@ -104,7 +104,7 @@ class Profile extends Component {
             <Paper className={classes.paper}>
                 <div className={classes.profile}>
                     <div className="image-wrapper">
-                        <img src={imageUrl} alt="profile image" className="profile-image"/>
+                        <img src={imageUrl} alt="profile" className="profile-image"/>
                         <input type="file" id="imageInput" hidden="hidden" onChange={this.handleImageChange}/>
                         <MyButton tip="Edit profile picture" onClick={this.handleEditPicture} btnClassName="button">
                             <EditIcon color="primary"/>
@@ -127,7 +127,7 @@ class Profile extends Component {
                         {website && (
                             <Fragment>
                                 <LinkIcon color="primary"/>
-                                <a href={website} target="_blank" rel="noopener nonreferrer">
+                                <a href={website} target="_blank" rel="noopener noreferrer">
                                     {' '}{website}
                                 </a>
                             </Fragment>
