@@ -105,6 +105,23 @@ export const deleteScream = (screamId) => (dispatch) => {
 }
 
 
+export const getUserData = (userhandle) => dispatch => {
+    dispatch({ type: LOADING_DATA });
+    axios.get(`/user/${userhandle}`)
+        .then(res => {
+            dispatch({
+                type: SET_SCREAMS,
+                payload: res.data.screams
+            });
+        })
+        .catch(() => {
+            dispatch({
+                type: SET_SCREAMS,
+                payload: null
+            })
+        })
+}
+
 // clear errors
 export const clearErrors = () => dispatch => {
     dispatch({ type: CLEAR_ERRORS });

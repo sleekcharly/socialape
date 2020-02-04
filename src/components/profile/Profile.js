@@ -5,6 +5,8 @@ import dayjs from 'dayjs';
 import EditDetails from './EditDetails';
 import MyButton from '../../util/MyButton';
 
+import ProfileSkeleton from '../../util/ProfileSkeleton';
+
 
 // MUI stuff
 /* run npm install --save @material-ui/icons */
@@ -157,7 +159,7 @@ class Profile extends Component {
                     </Button>
                 </div>
             </Paper>
-        )) : (<p>loading...</p>)
+        )) : <ProfileSkeleton />
 
         return profileMarkup;
     }

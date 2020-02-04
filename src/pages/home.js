@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ScreamSkeleton from '../util/ScreamSkeleton';
 
 
 // bring in materil-ui grid
@@ -26,7 +27,7 @@ class home extends Component {
         const { screams, loading } = this.props.data;
         let recentScreamsMarkup = !loading ? (
             screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
-        ) : ( <p>Loading ...</p> );
+        ) : <ScreamSkeleton/>;
         return (
             <Grid container spacing={10}>
                 <Grid item sm={8} xs={12}>
