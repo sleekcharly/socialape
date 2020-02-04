@@ -159,7 +159,7 @@ class Profile extends Component {
                     </Button>
                 </div>
             </Paper>
-        )) : <ProfileSkeleton />
+        )) : (<ProfileSkeleton />);
 
         return profileMarkup;
     }

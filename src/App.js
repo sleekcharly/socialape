@@ -31,11 +31,13 @@ import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
 
-import Axios from 'axios';
+import axios from 'axios';
 
 
 // creating the theme
 const theme = createMuiTheme (themeFile);
+
+axios.defaults.baseURL = "https://europe-west2-socialape-62ccf.cloudfunctions.net/api";
 
 // get the authentication token form  the local storage
 const token = localStorage.FBIdToken;
@@ -50,7 +52,7 @@ if(token) {
     window.location.href = '/login';
   } else {
     store.dispatch({ type: SET_AUTHENTICATED });
-    Axios.defaults.headers.common['Authorization'] = token;
+    axios.defaults.headers.common['Authorization'] = token;
     store.dispatch(getUserData());
   }
 }
