@@ -1,7 +1,6 @@
 {
   "name": "socialape-client",
   "version": "0.1.0",
-  "homepage": "https://sleekcharly.github.io/socialape",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.0",
@@ -23,8 +22,6 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
