@@ -71,16 +71,16 @@ class App extends React.Component {
                 <Switch>
                   <Route exact path="/" component={home}/>
                   <AuthRoute
-                   exact
+                    exact
                     path="/login"
-                     component={login}
+                    component={login}
                       
                   />
                   
                   <AuthRoute
-                   exact
+                    exact
                     path="/signup"
-                     component={signup}
+                    component={signup}
                   />
 
                   <Route exact path="/users/:handle" component={user} />

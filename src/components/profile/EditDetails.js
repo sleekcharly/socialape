@@ -20,7 +20,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import EditIcon from '@material-ui/icons/Edit';
 
 const styles = (theme) => ({
-    ...theme.spredThis,
+    ...theme.spreadThis,
     button: {
         float: 'right'
     }
